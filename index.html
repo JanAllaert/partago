@@ -7,12 +7,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/7.2.0/highcharts.js" integrity="sha256-pWlJ6y5bcww1f1YFl+ak3DjzWUFtLTiy1u1amuLuSfA=" crossorigin="anonymous"></script>
     <script>
         const settings = {
-            Partago: {
+            'Partago groot bundel': {
                 variables: {
                     start: 30,
                     kwPerKm: 15.0 / 100, // TODO: afhankelijk van rijprofiel
                     creditsPerKw: 15,
                     euroPerCredit: 300.0 / 4800, // TODO: afhankelijk van laden
+                },
+                formule: '(start + km * kwPerKm * creditsPerKw + min) * euroPerCredit'
+            },
+            'Partago klein abonnement': {
+                variables: {
+                    start: 30,
+                    kwPerKm: 15.0 / 100, // TODO: afhankelijk van rijprofiel
+                    creditsPerKw: 15,
+                    euroPerCredit: 95.0 / 1800, // TODO: afhankelijk van laden
                 },
                 formule: '(start + km * kwPerKm * creditsPerKw + min) * euroPerCredit'
             },
